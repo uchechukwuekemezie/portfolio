@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  background-color: #333;
+  background-color: #87CEEB;
   color: white;
   padding: 10px 20px;
   text-align: center;
@@ -40,7 +40,7 @@ section {
 
 article.portfolio,
 article.project {
-  border: 1px solid #ccc;
+  border: 1px solid #87CEEB;
   padding: 15px;
   border-radius: 8px;
   overflow: hidden;
@@ -63,6 +63,7 @@ article.portfolio p {
 article.project h4 {
   font-size: 1.2rem;
   margin-bottom: 10px;
+  color: #87CEEB;
 }
 
 article.project img {
