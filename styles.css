@@ -1,13 +1,155 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.portfolio-intro{
-    display: block;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+nav h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+section {
+  padding: 20px;
+}
+
+.portfolio-intro,
+.project-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.portfolio-intro {
+  margin-bottom: 30px;
+}
+
+article.portfolio,
+article.project {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .portfolio-img {
-    width: 100%;
+  width: 100%; /* Ensures the image is responsive */
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+article.portfolio p {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Project articles */
+article.project h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+article.project img {
+  width: 100%; /* Image fits the container */
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+article.project a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+article.project a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 768px) {
+  /* Flexbox for portfolio and project layouts */
+  .portfolio-intro {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  article.portfolio {
+    display: flex;
+    gap: 20px;
+  }
+
+  .portfolio-img {
+    width: 40%; /* Image takes 40% of the available space */
+  }
+
+  article.portfolio p {
+    width: 60%; /* Text takes the remaining 60% */
+    font-size: 1.1rem;
+  }
+
+  .project-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* gap: 20px; */
+  }
+
+  article.project {
+    width: 30%; /* Each project takes up 30% of the available space */
+  }
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  margin-top: 30px; /* Space between content and footer */
+}
+
+.social-media a {
+  margin: 0 10px; /* Spacing between icons */
+  display: inline-block;
+}
+
+.social-media img {
+  width: 30px; /* Set the size of the social media icons */
+  height: auto;
+  border-radius: 50%; /* Optional: make icons circular */
+  transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+  transform: scale(1.2); /* Scale the icon when hovered */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  footer {
+    padding: 30px;
+  }
+
+  .social-media img {
+    width: 40px; /* Larger icons on bigger screens */
+  }
 }
